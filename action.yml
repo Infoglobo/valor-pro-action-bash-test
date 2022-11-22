@@ -8,6 +8,5 @@ branding:
 runs:
   using: "composite"
   steps:
-    - run: ./script.sh
-        
+    - run: script.sh
       shell: bash
