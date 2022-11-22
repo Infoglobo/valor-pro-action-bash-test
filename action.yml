@@ -8,5 +8,7 @@ branding:
 runs:
   using: "composite"
   steps:
+    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+      shell: bash 
     - run: script.sh
       shell: bash
