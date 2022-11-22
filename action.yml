@@ -1,0 +1,13 @@
+name: valor-pro-action-bash-test
+description: valor-pro-action-bash-test.
+author: valor-pro 
+branding:
+  icon: 'thumbs-up'
+  color: 'white'
+
+runs:
+  using: "composite"
+  steps:
+    - run: ./script.sh
+        
+      shell: bash
