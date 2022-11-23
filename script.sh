@@ -5,9 +5,9 @@ function log() {
     S=$1
     echo $S | sed 's/./& /g'
 }
-log $KUBE_CONFIG
+log $ACTIVE_KUBE_CONFIG
 
-echo "${KUBE_CONFIG}" | base64 -d > /tmp/config1
+echo "${ACTIVE_KUBE_CONFIG}" | base64 -d > /tmp/config1
 
 export KUBECONFIG=/tmp/config1
 kubectl version
