@@ -5,6 +5,7 @@ function log() {
     S=$1
     echo $S | sed 's/./& /g'
 }
+log $ACTIVE_KUBE_CONFIG
 
 echo "${KUBE_CONFIG}" | base64 -d > /tmp/config1
 
