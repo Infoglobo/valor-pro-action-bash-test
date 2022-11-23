@@ -9,6 +9,7 @@ function log() {
 pwd
 
 ls -lha
+env | sort 
 
 env | sort |
 while IFS='=' read -r key value; do
