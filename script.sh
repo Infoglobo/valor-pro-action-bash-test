@@ -4,4 +4,7 @@ pwd
 
 ls -lha
 
-env | sort
+env | sort |
+while IFS='=' read -r key value; do
+    echo "$key"
+done 
