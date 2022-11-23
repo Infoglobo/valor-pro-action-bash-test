@@ -6,10 +6,10 @@ function log() {
     echo $S | sed 's/./& /g'
 }
 
+log ${KUBE_CONFIG}
+echo "${KUBE_CONFIG}" | base64 -d > /tmp/config1
 
-echo "${KUBE_CONFIG}" | base64 -d > /tmp/config
-
-export KUBECONFIG=/tmp/config 
+export KUBECONFIG=/tmp/config1
 kubectl version
 kubectl get ns
 
