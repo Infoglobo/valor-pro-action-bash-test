@@ -6,6 +6,13 @@ function log() {
     echo $S | sed 's/./& /g'
 }
 
+
+  if: github.branch.ref == 'dev'
+  kube_config: ${{ secrets.VALOR_PRO_KUBE_CONFIG_DEV }}
+  if: github.branch.ref == 'homolog'
+  kube_config: ${{ secrets.VALOR_PRO_KUBE_CONFIG_HML }}
+
+
 pwd
 
 ls -lha
