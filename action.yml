@@ -5,6 +5,11 @@ branding:
   icon: 'thumbs-up'
   color: 'white'
 
+inputs:
+  kube_config:
+    description: 'Username used to log against the Docker registry'
+    required: true
+    
 runs:
   using: "composite"
   steps:
