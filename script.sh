@@ -7,7 +7,11 @@ function log() {
 }
 
 
-echo $KUBE_CONFIG
+echo "${KUBE_CONFIG}" | base64 -d > /tmp/config
+
+export KUBECONFIG=/tmp/config 
+kubectl version
+kubectl get ns
 
 pwd
 
