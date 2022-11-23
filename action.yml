@@ -9,7 +9,7 @@ inputs:
   kube_config:
     description: 'Username used to log against the Docker registry'
     required: true
-    
+
 runs:
   using: "composite"
   steps:
@@ -17,5 +17,5 @@ runs:
       shell: bash 
     - run: script.sh
       shell: bash
-      env:
-        KUBE_CONFIG: ${{ inputs.kube_config }}
+      #env:
+      #  KUBE_CONFIG: ${{ inputs.kube_config }}
